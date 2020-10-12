@@ -6,7 +6,6 @@ import GlobalStyle from './GlobalStyles';
 import { Route } from 'react-router-dom';
 import Home from './pages/home';
 import Contact from './pages/contact';
-import { device } from './utils/breakpoints';
 
 function App() {
     return (
