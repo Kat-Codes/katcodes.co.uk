@@ -1,8 +1,11 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import Header from './components/Header';
 import GlobalStyle from './GlobalStyles';
+import { Route } from 'react-router-dom';
+import Home from './pages/home';
+import Contact from './pages/contact';
 import { device } from './utils/breakpoints';
 
 function App() {
@@ -28,41 +31,17 @@ function App() {
             <GlobalStyle />
             <PageWrapper>
                 <Header />
-                <TitleContainer>
-                    <h2>
-                        Good <Time />, I'm Katie
-                    </h2>
-                    <p>
-                        I’m a UK based Software Engineer, working at Capital One
-                        in a back-end services team.
-                    </p>
-                    <Button href='https://twitter.com/katcodes'>
-                        Say hello
-                    </Button>
-                </TitleContainer>
+                <Route exact path='/'>
+                    <Home />
+                </Route>
+                <Route path='/contact'>
+                    <Contact />
+                </Route>
             </PageWrapper>
         </AppWrapper>
     );
 }
 
-const Time = () => {
-    let message;
-    const date = new Date();
-    const hour = date.getHours();
-
-    if (hour < 12) {
-        message = 'morning';
-    } else if (hour < 18) {
-        message = 'afternoon';
-    } else {
-        message = 'evening';
-    }
-    return <StyledTime>{message}</StyledTime>;
-};
-
-const StyledTime = styled.span`
-    text-decoration: underline;
-`;
 const AppWrapper = styled.div`
     width: 100%;
     display: flex;
@@ -70,31 +49,11 @@ const AppWrapper = styled.div`
 `;
 
 const PageWrapper = styled.div`
-    padding: 35px;
+    padding: 30px 0;
     min-height: 100vh;
     box-sizing: border-box;
     width: 90%;
-    max-width: 1200px;
-`;
-
-const TitleContainer = styled.div`
-    width: 100%;
-    margin-top: 100px;
-
-    > * {
-        margin: 10px 0px;
-    }
-
-    @media ${device.tablet} {
-        width: 50%;
-    }
-`;
-
-const Button = styled.a`
-    border: 2px solid black;
-    padding: 15px;
-    font-size: 16px;
-    display: inline-block;
+    max-width: 1000px;
 `;
 
 export default App;

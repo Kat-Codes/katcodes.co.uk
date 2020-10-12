@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         <StyledHeader>
-            {/* <Navbar navbarState={open} handleNavbar={handleNavbar} /> */}
+            <Navbar navbarState={open} handleNavbar={handleNavbar} />
             {/* <h2>hello world!</h2> */}
             <SocialLinks />
         </StyledHeader>
@@ -22,7 +22,7 @@ const StyledHeader = styled.header`
     flex: 1;
     box-sizing: border-box;
     width: 100%;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     display: flex;
 `;

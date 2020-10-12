@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { useSpring, animated } from 'react-spring';
+import { Link } from 'react-router-dom';
 
 const CollapseMenu = (props) => {
     const { open } = useSpring({ open: props.navbarState ? 0 : 1 });
@@ -26,14 +27,7 @@ const CollapseMenu = (props) => {
                         </StyledLink>
                     </li>
                     <li>
-                        <StyledLink
-                            to='/speaking/'
-                            onClick={props.handleNavbar}>
-                            Speaking
-                        </StyledLink>
-                    </li>
-                    <li>
-                        <StyledLink to='/contact/' onClick={props.handleNavbar}>
+                        <StyledLink to='/contact' onClick={props.handleNavbar}>
                             Contact
                         </StyledLink>
                     </li>
@@ -71,13 +65,12 @@ const NavLinks = styled.ul`
     }
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
     font-size: 1.4rem;
     color: black;
     line-height: 1.5;
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: 500;
     letter-spacing: 2px;
     cursor: pointer;
     position: relative;
