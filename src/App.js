@@ -3,10 +3,11 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import Header from './components/Header';
 import GlobalStyle from './GlobalStyles';
+import { device } from './utils/breakpoints';
 
 function App() {
     return (
-        <div className='App'>
+        <AppWrapper>
             <Helmet>
                 <meta charSet='utf-8' />
                 <title>Katie Walker, Software Engineer</title>
@@ -28,35 +29,64 @@ function App() {
             <PageWrapper>
                 <Header />
                 <TitleContainer>
-                    <h2>Good evening, I'm Katie</h2>
+                    <h2>
+                        Good <Time />, I'm Katie
+                    </h2>
                     <p>
                         I’m a UK based Software Engineer, working at Capital One
-                        as a back-end services engineer.
+                        in a back-end services team.
                     </p>
                     <Button href='https://twitter.com/katcodes'>
                         Say hello
                     </Button>
                 </TitleContainer>
             </PageWrapper>
-        </div>
+        </AppWrapper>
     );
 }
 
+const Time = () => {
+    let message;
+    const date = new Date();
+    const hour = date.getHours();
+
+    if (hour < 12) {
+        message = 'morning';
+    } else if (hour < 18) {
+        message = 'afternoon';
+    } else {
+        message = 'evening';
+    }
+    return <StyledTime>{message}</StyledTime>;
+};
+
+const StyledTime = styled.span`
+    text-decoration: underline;
+`;
+const AppWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+`;
+
 const PageWrapper = styled.div`
+    padding: 35px;
     min-height: 100vh;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 1200px;
 `;
 
 const TitleContainer = styled.div`
-    width: 50%;
-    padding: 35px;
-    min-width: 300px;
+    width: 100%;
     margin-top: 100px;
 
     > * {
         margin: 10px 0px;
+    }
+
+    @media ${device.tablet} {
+        width: 50%;
     }
 `;
 

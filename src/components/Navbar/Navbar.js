@@ -31,7 +31,6 @@ export default Navbar;
 
 const NavWrapper = styled.div`
     z-index: 10;
-    visibility: hidden;
 `;
 
 const NavBar = styled(animated.nav)`
