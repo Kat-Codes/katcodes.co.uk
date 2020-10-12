@@ -15,7 +15,7 @@ const Icon = styled.svg`
     transition: 200ms;
 
     ${StyledWrapper}:hover & {
-        stroke: #d4aad2;
+        stroke: #ccc;
     }
 `;
 
