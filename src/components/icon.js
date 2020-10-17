@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '../utils/breakpoints';
 
 const StyledWrapper = styled.div`
     display: inline-block;
@@ -11,11 +12,16 @@ const Icon = styled.svg`
     width: 50px;
     /* fill: black; */
     stroke: black;
-    padding-right: 10px;
+    margin: 0;
+    padding: 0 5px;
     transition: 200ms;
 
     ${StyledWrapper}:hover & {
-        stroke: #ccc;
+        stroke: #aaa;
+    }
+
+    @media ${device.tablet} {
+        margin-right: 10px;
     }
 `;
 

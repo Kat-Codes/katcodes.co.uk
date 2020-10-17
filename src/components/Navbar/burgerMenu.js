@@ -35,6 +35,7 @@ const Wrapper = styled.div`
         height: 2px;
         transform: rotate(0deg);
         transition: all ease-in-out 0.2s;
+        z-index: 100;
     }
 
     .open span:nth-child(3) {

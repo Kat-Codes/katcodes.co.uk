@@ -19,12 +19,14 @@ const Header = () => {
 };
 
 const StyledHeader = styled.header`
+    max-width: 1000px;
+    padding: 30px 0;
+    width: 90%;
     flex: 1;
-    box-sizing: border-box;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
     display: flex;
+    margin: 0 auto;
 `;
 
 export default Header;

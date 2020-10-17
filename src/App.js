@@ -6,6 +6,7 @@ import GlobalStyle from './GlobalStyles';
 import { Route } from 'react-router-dom';
 import Home from './pages/home';
 import Contact from './pages/contact';
+import Footer from './components/footer';
 
 function App() {
     return (
@@ -30,12 +31,15 @@ function App() {
             <GlobalStyle />
             <PageWrapper>
                 <Header />
-                <Route exact path='/'>
-                    <Home />
-                </Route>
-                <Route path='/contact'>
-                    <Contact />
-                </Route>
+                <Content>
+                    <Route exact path='/'>
+                        <Home />
+                    </Route>
+                    <Route path='/contact'>
+                        <Contact />
+                    </Route>
+                </Content>
+                <Footer />
             </PageWrapper>
         </AppWrapper>
     );
@@ -43,16 +47,20 @@ function App() {
 
 const AppWrapper = styled.div`
     width: 100%;
-    display: flex;
-    justify-content: center;
+`;
+
+const Content = styled.main`
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1000px;
+    width: 90%;
 `;
 
 const PageWrapper = styled.div`
-    padding: 30px 0;
-    min-height: 100vh;
-    box-sizing: border-box;
-    width: 90%;
-    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 `;
 
 export default App;
