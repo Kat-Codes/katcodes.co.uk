@@ -30,7 +30,12 @@ const StyledColumn = styled.div`
     }
 `;
 
-const Column = ({ title, children }) => (
+type ColumnProps = {
+    title: String;
+    children: React.ReactNode
+}
+
+const Column = ({ title, children }: ColumnProps) => (
     <StyledColumn>
         <h5>{title}-</h5>
         {children}

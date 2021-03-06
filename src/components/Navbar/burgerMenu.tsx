@@ -1,10 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const BurgerMenu = (props) => {
+type MenuProps = {
+    navbarState: boolean;
+    handleNavbar: Function;
+};
+
+
+const BurgerMenu = ({navbarState, handleNavbar } : MenuProps) => {
+
+    const sendClickEvent = () => {
+        handleNavbar();
+    };
+    
     return (
-        <Wrapper onClick={props.handleNavbar}>
-            <FlexWrapper className={props.navbarState ? 'open' : ''}>
+        <Wrapper onClick={sendClickEvent}>
+            <FlexWrapper className={navbarState ? 'open' : ''}>
                 <span>&nbsp;</span>
                 <span>&nbsp;</span>
                 <span>&nbsp;</span>

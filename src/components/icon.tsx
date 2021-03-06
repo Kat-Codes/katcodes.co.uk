@@ -25,7 +25,7 @@ const Icon = styled.svg`
     }
 `;
 
-const IconWrapper = ({ to, children, label }) => (
+const IconWrapper = ({ to, children, label }: WrapperProps) => (
     <StyledWrapper>
         <a
             href={to}
@@ -36,5 +36,11 @@ const IconWrapper = ({ to, children, label }) => (
         </a>
     </StyledWrapper>
 );
+
+type WrapperProps = {
+    to: string;
+    label: string;
+    children: React.ReactElement;
+};
 
 export { Icon, IconWrapper };

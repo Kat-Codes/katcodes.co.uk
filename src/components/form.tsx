@@ -5,7 +5,7 @@ import Button from './button';
 
 let submitted = false;
 
-const encode = (data) => {
+const encode = (data: any) => {
     return Object.keys(data)
         .map(
             (key) =>
@@ -15,8 +15,8 @@ const encode = (data) => {
 };
 
 class ContactForm extends React.Component {
-    constructor() {
-        super();
+    constructor(props: any) {
+        super(props);
         this.state = submitted;
     }
 
@@ -50,12 +50,11 @@ class ContactForm extends React.Component {
                         .finally(() => {
                             actions.setSubmitting(false);
                             this.setState({ submitted: true });
-                            console.log(this.state.submitted);
                         });
                 }}
                 validate={(values) => {
                     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-                    const errors = {};
+                    const errors: any = {};
                     if (!values.name) {
                         errors.name = '*';
                     }

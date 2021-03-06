@@ -4,10 +4,19 @@ import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
 
-const CollapseMenu = (props) => {
-    const { open } = useSpring({ open: props.navbarState ? 0 : 1 });
+type MenuProps = {
+    navbarState: boolean;
+    handleNavbar: Function;
+};
 
-    if (props.navbarState === true) {
+const CollapseMenu = ( {handleNavbar, navbarState}: MenuProps) => {
+    const { open } = useSpring({ open: navbarState ? 0 : 1 });
+
+    const sendClickEvent = () => {
+        handleNavbar();
+    };
+
+    if (navbarState === true) {
         return (
             <CollapseWrapper
                 style={{
@@ -22,12 +31,12 @@ const CollapseMenu = (props) => {
                 }}>
                 <NavLinks>
                     <li>
-                        <StyledLink to='/' onClick={props.handleNavbar}>
+                        <StyledLink to='/' onClick={sendClickEvent}>
                             Home
                         </StyledLink>
                     </li>
                     <li>
-                        <StyledLink to='/contact' onClick={props.handleNavbar}>
+                        <StyledLink to='/contact' onClick={sendClickEvent}>
                             Contact
                         </StyledLink>
                     </li>

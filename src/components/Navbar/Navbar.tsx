@@ -5,7 +5,12 @@ import { useSpring, animated } from 'react-spring';
 import BurgerMenu from './burgerMenu';
 import CollapseMenu from './collapseMenu';
 
-const Navbar = ({ navbarState, handleNavbar }) => {
+type NavbarProps = {
+    navbarState: boolean;
+    handleNavbar: Function;
+};
+
+const Navbar = ({ navbarState, handleNavbar }: NavbarProps) => {
     const barAnimation = useSpring({
         from: { transform: 'translate3d(0, 0, 0)' },
         transform: 'translate3d(0, 0, 0)',

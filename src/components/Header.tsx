@@ -12,7 +12,6 @@ const Header = () => {
     return (
         <StyledHeader>
             <Navbar navbarState={open} handleNavbar={handleNavbar} />
-            {/* <h2>hello world!</h2> */}
             <SocialLinks />
         </StyledHeader>
     );

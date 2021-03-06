@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-class Button extends React.Component {
+type PropTypes = {
+    type?: any;
+};
+
+class Button extends React.Component<PropTypes> {
     render() {
         return (
             <StyledButton {...this.props}>{this.props.children}</StyledButton>
