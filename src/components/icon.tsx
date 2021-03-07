@@ -2,6 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import { device } from '../utils/breakpoints';
 
+const IconWrapper = ({ to, children, label }: WrapperProps) => (
+    <StyledWrapper>
+        <a
+            href={to}
+            aria-label={label}
+            target='_blank'
+            rel='noopener noreferrer'>
+            {children}
+        </a>
+    </StyledWrapper>
+);
+
+type WrapperProps = {
+    to: string;
+    label: string;
+    children: React.ReactElement;
+};
+
 const StyledWrapper = styled.div`
     display: inline-block;
     cursor: pointer;
@@ -24,23 +42,5 @@ const Icon = styled.svg`
         margin-right: 10px;
     }
 `;
-
-const IconWrapper = ({ to, children, label }: WrapperProps) => (
-    <StyledWrapper>
-        <a
-            href={to}
-            aria-label={label}
-            target='_blank'
-            rel='noopener noreferrer'>
-            {children}
-        </a>
-    </StyledWrapper>
-);
-
-type WrapperProps = {
-    to: string;
-    label: string;
-    children: React.ReactElement;
-};
 
 export { Icon, IconWrapper };

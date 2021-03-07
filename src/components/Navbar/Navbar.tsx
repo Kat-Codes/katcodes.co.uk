@@ -5,11 +5,6 @@ import { useSpring, animated } from 'react-spring';
 import BurgerMenu from './burgerMenu';
 import CollapseMenu from './collapseMenu';
 
-type NavbarProps = {
-    navbarState: boolean;
-    handleNavbar: Function;
-};
-
 const Navbar = ({ navbarState, handleNavbar }: NavbarProps) => {
     const barAnimation = useSpring({
         from: { transform: 'translate3d(0, 0, 0)' },
@@ -32,7 +27,10 @@ const Navbar = ({ navbarState, handleNavbar }: NavbarProps) => {
     );
 };
 
-export default Navbar;
+type NavbarProps = {
+    navbarState: boolean;
+    handleNavbar: Function;
+};
 
 const NavWrapper = styled.div`
     z-index: 10;
@@ -42,3 +40,5 @@ const NavBar = styled(animated.nav)`
     color: black;
     z-index: 10;
 `;
+
+export default Navbar;

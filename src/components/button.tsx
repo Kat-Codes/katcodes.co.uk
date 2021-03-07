@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type PropTypes = {
-    type?: any;
-};
-
 class Button extends React.Component<PropTypes> {
     render() {
         return (
@@ -12,6 +8,10 @@ class Button extends React.Component<PropTypes> {
         );
     }
 }
+
+type PropTypes = {
+    type?: any;
+};
 
 const StyledButton = styled.button`
     border: solid 2px black;

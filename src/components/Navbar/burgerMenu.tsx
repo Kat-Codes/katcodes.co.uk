@@ -1,14 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type MenuProps = {
-    navbarState: boolean;
-    handleNavbar: Function;
-};
-
-
 const BurgerMenu = ({navbarState, handleNavbar } : MenuProps) => {
-
     const sendClickEvent = () => {
         handleNavbar();
     };
@@ -24,7 +17,10 @@ const BurgerMenu = ({navbarState, handleNavbar } : MenuProps) => {
     );
 };
 
-export default BurgerMenu;
+type MenuProps = {
+    navbarState: boolean;
+    handleNavbar: Function;
+};
 
 const FlexWrapper = styled.div`
     display: flex;
@@ -63,3 +59,5 @@ const Wrapper = styled.div`
         left: 2px;
     }
 `;
+
+export default BurgerMenu;

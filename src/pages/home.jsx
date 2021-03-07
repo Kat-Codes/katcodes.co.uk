@@ -16,7 +16,20 @@ const Home = () => (
     </TitleContainer>
 );
 
-export default Home;
+const Time = () => {
+    let message;
+    const date = new Date();
+    const hour = date.getHours();
+
+    if (hour < 12) {
+        message = 'morning';
+    } else if (hour < 18) {
+        message = 'afternoon';
+    } else {
+        message = 'evening';
+    }
+    return <StyledTime>{message}</StyledTime>;
+};
 
 const LinkButton = styled(Link)`
     border: solid 2px black;
@@ -35,21 +48,6 @@ const LinkButton = styled(Link)`
     }
 `;
 
-const Time = () => {
-    let message;
-    const date = new Date();
-    const hour = date.getHours();
-
-    if (hour < 12) {
-        message = 'morning';
-    } else if (hour < 18) {
-        message = 'afternoon';
-    } else {
-        message = 'evening';
-    }
-    return <StyledTime>{message}</StyledTime>;
-};
-
 const StyledTime = styled.span`
     text-decoration: underline;
 `;
@@ -66,3 +64,5 @@ const TitleContainer = styled.div`
         width: 50%;
     }
 `;
+
+export default Home;

@@ -4,11 +4,6 @@ import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
 
-type MenuProps = {
-    navbarState: boolean;
-    handleNavbar: Function;
-};
-
 const CollapseMenu = ( {handleNavbar, navbarState}: MenuProps) => {
     const { open } = useSpring({ open: navbarState ? 0 : 1 });
 
@@ -45,6 +40,11 @@ const CollapseMenu = ( {handleNavbar, navbarState}: MenuProps) => {
         );
     }
     return null;
+};
+
+type MenuProps = {
+    navbarState: boolean;
+    handleNavbar: Function;
 };
 
 export default CollapseMenu;

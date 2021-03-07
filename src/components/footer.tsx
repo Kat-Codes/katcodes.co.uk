@@ -2,46 +2,6 @@ import styled from 'styled-components';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const StyledFooter = styled.footer`
-    width: 100%;
-    background: #ddd;
-    /* border-top: solid black 2px; */
-    padding: 30px 0;
-`;
-
-const Content = styled.div`
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1000px;
-    color: #333;
-    display: flex;
-    justify-content: space-evenly;
-`;
-
-const StyledColumn = styled.div`
-    h5 {
-        padding: 10px 0;
-        text-transform: uppercase;
-    }
-
-    p {
-        font-size: 14px;
-        text-decoration: underline;
-    }
-`;
-
-type ColumnProps = {
-    title: String;
-    children: React.ReactNode
-}
-
-const Column = ({ title, children }: ColumnProps) => (
-    <StyledColumn>
-        <h5>{title}-</h5>
-        {children}
-    </StyledColumn>
-);
-
 const Footer = () => (
     <StyledFooter>
         <Content>
@@ -82,5 +42,45 @@ const Footer = () => (
         </Content>
     </StyledFooter>
 );
+
+const Column = ({ title, children }: ColumnProps) => (
+    <StyledColumn>
+        <h5>{title}-</h5>
+        {children}
+    </StyledColumn>
+);
+
+type ColumnProps = {
+    title: String;
+    children: React.ReactNode
+}
+
+const StyledFooter = styled.footer`
+    width: 100%;
+    background: #ddd;
+    /* border-top: solid black 2px; */
+    padding: 30px 0;
+`;
+
+const Content = styled.div`
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+    color: #333;
+    display: flex;
+    justify-content: space-evenly;
+`;
+
+const StyledColumn = styled.div`
+    h5 {
+        padding: 10px 0;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 14px;
+        text-decoration: underline;
+    }
+`;
 
 export default Footer;
