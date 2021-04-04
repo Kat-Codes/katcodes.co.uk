@@ -44,7 +44,7 @@ const Wrapper = styled.div`
         transition: all ease-in-out 0.2s;
     }
 
-    .open span:nth-child(3) {
+    /* .open span:nth-child(3) {
         transform: rotate(45deg);
         top: -14px;
     }
@@ -57,7 +57,7 @@ const Wrapper = styled.div`
         transform: rotate(-45deg);
         top: 14px;
         left: 2px;
-    }
+    } */
 `;
 
 export default BurgerMenu;

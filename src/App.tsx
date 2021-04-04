@@ -27,7 +27,6 @@ function App() {
                 <link
                     href='https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400&display=swap'
                     rel='stylesheet'></link>
-                
             </Helmet>
             <GlobalStyle />
             <PageWrapper>

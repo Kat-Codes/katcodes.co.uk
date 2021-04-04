@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Navbar from './Navbar/Navbar';
-import SocialLinks from './SocialLinks';
+import Navbar from './navbar/navbar';
+import SocialLinks from './socialLinks';
 
 const Header = () => {
     const [open, setOpen] = useState(false);
