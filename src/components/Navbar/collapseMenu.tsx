@@ -1,34 +1,59 @@
 import React from 'react';
 import styled from 'styled-components';
+import gsap from 'gsap';
 
 import { Link } from 'react-router-dom';
 
-const CollapseMenu = ( {handleNavbar, navbarState}: MenuProps) => {
-    // const open = navbarState ? 0 : 1 ;
+const common = {
+    duration: 0.8,
+    ease: "expo.out"
+};
+
+const CollapseMenu = ({ handleNavbar, navbarState }: MenuProps) => {
+    const tl = gsap.timeline();
 
     const sendClickEvent = () => {
         handleNavbar();
+        updateMenu();
     };
 
-    if (navbarState === true) {
-        return (
-            <CollapseWrapper>
-                <NavLinks>
-                    <li>
-                        <StyledLink to='/' onClick={sendClickEvent}>
-                            Home
-                        </StyledLink>
-                    </li>
-                    <li>
-                        <StyledLink to='/contact' onClick={sendClickEvent}>
-                            Contact
-                        </StyledLink>
-                    </li>
-                </NavLinks>
-            </CollapseWrapper>
-        );
-    }
-    return null;
+    const updateMenu = () => {
+        if (navbarState) {
+            tl.to('.collapseWrapper', {
+                ...common,
+                top: 0,
+                left: 0,
+                right: 0,
+                height: '100%',
+            });
+        } else {
+            tl.to('.collapseWrapper', {
+                ...common,
+                top: '-100%',
+                left: 0,
+                right: 0,
+                height: '100%',
+            });
+        }
+    };
+
+    updateMenu();
+    return (
+        <CollapseWrapper className='collapseWrapper'>
+            <NavLinks>
+                <li>
+                    <StyledLink to='/' onClick={sendClickEvent}>
+                        Home
+                    </StyledLink>
+                </li>
+                <li>
+                    <StyledLink to='/contact' onClick={sendClickEvent}>
+                        Contact
+                    </StyledLink>
+                </li>
+            </NavLinks>
+        </CollapseWrapper>
+    );
 };
 
 type MenuProps = {
@@ -39,14 +64,13 @@ type MenuProps = {
 export default CollapseMenu;
 
 const CollapseWrapper = styled.div`
-    /* z-index: 5; */
     background-color: #ddd;
     position: fixed;
-    top: 0;
+    display: flex;
+    top: -100%;
     left: 0;
     right: 0;
     height: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import gsap from 'gsap';
 
 const commonAnim = {
-    duration: 0.1,
+    duration: 0.1
 };
 
 const BurgerMenu = ({ navbarState, handleNavbar }: MenuProps) => {
