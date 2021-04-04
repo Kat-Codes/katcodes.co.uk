@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet';
 import GlobalStyle from './GlobalStyles';
 import { Route } from 'react-router-dom';
 import Home from './pages/home';
-import Contact from './pages/contact';
-import Footer from './components/footer';
-import Header from './components/header';
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
     return (

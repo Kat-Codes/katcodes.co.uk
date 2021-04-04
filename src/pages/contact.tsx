@@ -1,6 +1,6 @@
 import React from 'react';
 import gsap from 'gsap';
-import ContactForm from '../components/form';
+import ContactForm from '../components/Form';
 
 class Contact extends React.Component {
 

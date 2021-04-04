@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import BurgerMenu from './burgerMenu';
-import CollapseMenu from './collapseMenu';
+import BurgerMenu from './BurgerMenu';
+import CollapseMenu from './CollapseMenu';
 
 const Navbar = ({ navbarState, handleNavbar }: NavbarProps) => (
     <NavWrapper>

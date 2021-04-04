@@ -1,8 +1,8 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import styled from 'styled-components';
+import Button from './Button';
 
-import Button from './button';
 
 let submitted = false;
 
