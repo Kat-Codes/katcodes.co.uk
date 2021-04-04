@@ -1,5 +1,5 @@
 {
-  "name": "katcodes-minimal",
+  "name": "katcodes.co.uk",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,12 +23,17 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test && npm run build."
+    }
+  },
+  
   "browserslist": {
     "production": [
       ">0.2%",
@@ -44,6 +49,7 @@
   "devDependencies": {
     "@types/react-helmet": "^6.1.0",
     "@types/react-router-dom": "^5.1.7",
-    "@types/styled-components": "^5.1.7"
+    "@types/styled-components": "^5.1.7",
+    "husky": "^6.0.0"
   }
 }

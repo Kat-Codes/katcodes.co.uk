@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
-import Header from './components/Header';
 import GlobalStyle from './GlobalStyles';
 import { Route } from 'react-router-dom';
 import Home from './pages/home';
 import Contact from './pages/contact';
 import Footer from './components/footer';
+import Header from './components/header';
 
 function App() {
     return (
