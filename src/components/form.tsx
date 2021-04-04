@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import styled from 'styled-components';
+
 import Button from './button';
 
 let submitted = false;
@@ -67,7 +68,10 @@ class ContactForm extends React.Component {
                     return errors;
                 }}>
                 {() => (
-                    <StyledForm name='contact-demo' data-netlify={true}>
+                    <StyledForm
+                        name='contact-demo'
+                        className='contactForm'
+                        data-netlify={true}>
                         <Row>
                             <StyledField placeholder='Name' name='name' />
                             <Error name='name' />
@@ -109,6 +113,7 @@ const Row = styled.div`
 
 const StyledForm = styled(Form)`
     margin: 50px auto;
+    opacity: 0;
 `;
 
 const StyledField = styled(Field)`

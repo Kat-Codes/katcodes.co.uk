@@ -3,18 +3,22 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { device } from '../utils/breakpoints';
 
-const Home = () => (
-    <TitleContainer>
-        <h2>
-            Good <Time />, I'm Katie
-        </h2>
-        <p>
-            I’m a UK based Software Engineer, working at Capital One in a
-            back-end services team.
-        </p>
-        <LinkButton to='/contact'>Say hello</LinkButton>
-    </TitleContainer>
-);
+class Home extends React.Component {
+    render() {
+        return (
+            <TitleContainer>
+                <h2>
+                    Good <Time />, I'm Katie
+                </h2>
+                <p>
+                    I’m a UK based Software Engineer, working at Capital One in
+                    a back-end services team.
+                </p>
+                <LinkButton to='/contact'>Say hello</LinkButton>
+            </TitleContainer>
+        );
+    }
+}
 
 const Time = () => {
     let message;
@@ -54,7 +58,7 @@ const StyledTime = styled.span`
 
 const TitleContainer = styled.div`
     width: 100%;
-    margin-top: 100px;
+    margin-top: 125px;    
 
     > * {
         margin: 10px 0px;
