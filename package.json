@@ -33,7 +33,6 @@
       "pre-commit": "npm run test && npm run build."
     }
   },
-  
   "browserslist": {
     "production": [
       ">0.2%",
