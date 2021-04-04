@@ -3,10 +3,9 @@ import gsap from 'gsap';
 import ContactForm from '../components/Form';
 
 class Contact extends React.Component {
-
-  componentDidMount() {
-    this.animate();
-}
+    componentDidMount() {
+        this.animate();
+    }
 
     animate = () => {
         const tl = gsap.timeline();
@@ -14,7 +13,7 @@ class Contact extends React.Component {
     };
 
     render() {
-        return <ContactForm/>;
+        return <ContactForm />;
     }
 }
 
