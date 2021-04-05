@@ -1,10 +1,8 @@
 import React from 'react';
+import gsap from 'gsap';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import styled from 'styled-components';
 import Button from './Button';
-
-
-let submitted = false;
 
 const encode = (data: any) => {
     return Object.keys(data)
@@ -15,10 +13,20 @@ const encode = (data: any) => {
         .join('&');
 };
 
-class ContactForm extends React.Component {
+const btnProps = {
+    className: 'submitBtn',
+};
+
+interface AppState {
+    submitted: boolean;
+}
+
+class ContactForm extends React.Component<{}, AppState> {
     constructor(props: any) {
         super(props);
-        this.state = submitted;
+        this.state = {
+            submitted: false
+        };
     }
 
     render() {
@@ -44,6 +52,8 @@ class ContactForm extends React.Component {
                     })
                         .then(() => {
                             actions.resetForm();
+                            const tl = gsap.timeline();
+                            tl.to('.submitBtn', { y: -25, opacity: 1 });
                         })
                         .catch(() => {
                             alert('Error');
@@ -90,7 +100,9 @@ class ContactForm extends React.Component {
                             <Error name='message' />
                         </Row>
                         <Row>
-                            <Button type='submit'>Submit</Button>
+                            <Button {...btnProps} type='submit'>
+                                {this.state.submitted}
+                            </Button>
                         </Row>
                     </StyledForm>
                 )}

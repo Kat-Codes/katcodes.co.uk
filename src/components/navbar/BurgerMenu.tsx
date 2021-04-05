@@ -39,11 +39,6 @@ const BurgerMenu = ({ navbarState, handleNavbar }: MenuProps) => {
     );
 };
 
-var tl = gsap.timeline();
-tl.to('.box1', { duration: 2, x: 100 })
-    .to('.box2', { duration: 1, y: 200 })
-    .to('.box3', { duration: 3, rotation: 360 });
-
 type MenuProps = {
     navbarState: boolean;
     handleNavbar: Function;
