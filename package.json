@@ -30,7 +30,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test && npm run build."
+      "pre-commit": "npm run test && npm run build"
     }
   },
   "browserslist": {
@@ -49,6 +49,6 @@
     "@types/react-helmet": "^6.1.0",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.7",
-    "husky": "^6.0.0"
+    "husky": "^4.3.8"
   }
 }
