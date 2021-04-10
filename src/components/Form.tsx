@@ -1,5 +1,4 @@
 import React from 'react';
-import gsap from 'gsap';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import styled from 'styled-components';
 import Button from './Button';
@@ -52,8 +51,6 @@ class ContactForm extends React.Component<{}, AppState> {
                     })
                         .then(() => {
                             actions.resetForm();
-                            const tl = gsap.timeline();
-                            tl.to('.submitBtn', { y: -25, opacity: 1 });
                         })
                         .catch(() => {
                             alert('Error');
@@ -101,7 +98,7 @@ class ContactForm extends React.Component<{}, AppState> {
                         </Row>
                         <Row>
                             <Button {...btnProps} type='submit'>
-                                {this.state.submitted}
+                                Submit
                             </Button>
                         </Row>
                     </StyledForm>
