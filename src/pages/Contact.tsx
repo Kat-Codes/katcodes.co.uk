@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import gsap from 'gsap';
 import ContactForm from '../components/Form';
 
@@ -13,8 +14,18 @@ class Contact extends React.Component {
     };
 
     render() {
-        return <ContactForm />;
+        return (
+            <>
+                {/* <Title>Hello</Title> */}
+                <ContactForm />
+            </>
+        )
+
     }
 }
+
+// const Title = styled.h2`
+//     margin-top: 125px;
+// `;
 
 export default Contact;
