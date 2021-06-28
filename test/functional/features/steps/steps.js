@@ -1,7 +1,7 @@
-const { When, Then, Before, After } = require('@cucumber/cucumber');
-const assert = require('assert');
+const { When, Then, Before, After, Given } = require('@cucumber/cucumber');
 const { Builder, By } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
+const assert = require('assert');
 
 require('chromedriver');
 
@@ -18,11 +18,15 @@ After(function() {
     driver.close();
 })
 
-When('I navigate to the homepage', async function () {
+Given(/^the site is available$/, async function () {
     await driver.get('http://localhost:3000');
 });
 
-Then('I should see a title', async function () {
+When(/^I navigate to the (.*) page$/, async function (name) {
+    await driver.get(`http://localhost:3000/${name}`);
+});
+
+Then(/^I should see a title$/, async function () {
     const title = await driver.findElement(By.tagName('h2')).getText();
     assert.strictEqual(title, "Good evening, I'm Katie");
 });

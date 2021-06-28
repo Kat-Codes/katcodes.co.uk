@@ -1,5 +1,6 @@
-Feature: Logging in
+Feature: Homepage
 
 Scenario: Homepage navigation
-    When I navigate to the homepage
+    Given the site is available
+    When I navigate to the home page
     Then I should see a title
