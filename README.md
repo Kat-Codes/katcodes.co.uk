@@ -10,6 +10,7 @@ My personal website ✨
 - TypeScript
 - Styled Components
 - Styled System
+- Cucumber
 
 ### Installation
 
