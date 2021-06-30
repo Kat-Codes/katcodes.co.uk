@@ -1,13 +1,23 @@
 import { DefaultTheme } from 'styled-components';
 
-const myTheme: DefaultTheme = {
+const lightTheme: DefaultTheme = {
   borderRadius: '5px',
 
   colors: {
     foreground: '#333',
     background: 'white',
-    footer: '#ddd',
+    mid: '#ddd',
   },
 };
 
-export { myTheme };
+const darkTheme: DefaultTheme = {
+  borderRadius: '5px',
+
+  colors: {
+    foreground: 'white',
+    background: '#333',
+    mid: '#555',
+  },
+};
+
+export { lightTheme, darkTheme };

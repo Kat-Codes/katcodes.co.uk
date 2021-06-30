@@ -37,7 +37,7 @@ const Time = () => {
 };
 
 const LinkButton = styled(Link)`
-    border: solid 2px black;
+    border: solid 2px ${props => props.theme.colors.foreground};
     display: inline-block;
     padding: 10px 20px;
     color: ${props => props.theme.colors.foreground};

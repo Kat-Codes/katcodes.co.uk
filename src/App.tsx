@@ -5,7 +5,7 @@ import GlobalStyle from './theme/GlobalStyles';
 import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import { myTheme } from './theme/theme';
+import { lightTheme, darkTheme } from './theme/theme';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
@@ -29,7 +29,7 @@ function App() {
                     href='https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400&display=swap'
                     rel='stylesheet'></link>
             </Helmet>
-            <ThemeProvider theme={myTheme}>
+            <ThemeProvider theme={darkTheme}>
                 <GlobalStyle />
                 <PageWrapper>
                     <Header />

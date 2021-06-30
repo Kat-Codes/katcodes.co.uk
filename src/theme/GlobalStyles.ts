@@ -7,7 +7,7 @@ declare module 'styled-components' {
     colors: {
       foreground: string;
       background: string;
-      footer: string;
+      mid: string;
     };
   }
 }
@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: black;
+    color: ${props => props.theme.colors.foreground};
   }
 
   * {

@@ -136,7 +136,7 @@ const StyledField = styled(Field)`
     background: none;
     border: none;
     color: ${props => props.theme.colors.foreground};
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid ${props => props.theme.colors.foreground};
 `;
 
 export default ContactForm;

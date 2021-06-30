@@ -57,7 +57,7 @@ type ColumnProps = {
 
 const StyledFooter = styled.footer`
     width: 100%;
-    background: ${props => props.theme.colors.footer};
+    background: ${props => props.theme.colors.mid};
     padding: 30px 0;
 `;
 
@@ -70,15 +70,18 @@ const Content = styled.div`
 `;
 
 const StyledColumn = styled.div`
+
     h5 {
         padding: 10px 0;
         text-transform: uppercase;
     }
 
     p {
+    color: ${props => props.theme.colors.foreground};
         font-size: 14px;
         text-decoration: underline;
     }
+
 `;
 
 export default Footer;

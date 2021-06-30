@@ -64,7 +64,7 @@ type MenuProps = {
 export default CollapseMenu;
 
 const CollapseWrapper = styled.div`
-    background-color: #ddd;
+    background: ${props => props.theme.colors.mid};
     position: fixed;
     display: flex;
     top: -100%;
