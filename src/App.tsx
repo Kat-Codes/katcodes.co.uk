@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { DefaultTheme, ThemeProvider } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import GlobalStyle from './theme/GlobalStyles';
 import { Route, Switch } from 'react-router-dom';
@@ -9,45 +9,60 @@ import { lightTheme, darkTheme } from './theme/theme';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
-function App() {
-    return (
-        <AppWrapper>
-            <Helmet>
-                <meta charSet='utf-8' />
-                <title>Katie Walker, Software Engineer</title>
-                <meta
-                    name='description'
-                    content='Katie Walker is a Nottingham, UK based Software Engineer, Public Speaker and Community Organiser.'
-                />
-                <meta name='keywords' content='Software Engineer, Nottingham' />
-                <meta name='author' content='Katie Walker' />
-                <meta
-                    name='viewport'
-                    content='width=device-width, initial-scale=1.0'
-                />
-                <link
-                    href='https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400&display=swap'
-                    rel='stylesheet'></link>
-            </Helmet>
-            <ThemeProvider theme={darkTheme}>
-                <GlobalStyle />
-                <PageWrapper>
-                    <Header />
-                    <Content>
-                        <Switch>
-                            <Route exact path='/contact'>
-                                <Contact />
-                            </Route>
-                            <Route path='*'>
-                                <Home />
-                            </Route>
-                        </Switch>
-                    </Content>
-                    <Footer />
-                </PageWrapper>
-            </ThemeProvider>
-        </AppWrapper>
-    );
+class App extends React.Component<{}, { toggleState: boolean, theme: DefaultTheme }> {
+    constructor(props: any) {
+        super(props)
+        this.state = { toggleState: false, theme: lightTheme };
+    }
+
+    toggleTheme = (toggle: boolean) => {
+        if (toggle) {
+            this.setState({theme: lightTheme})
+        } else {
+            this.setState({theme: darkTheme})
+        }
+    } 
+
+    render() {
+        return (
+            <AppWrapper>
+                <Helmet>
+                    <meta charSet='utf-8' />
+                    <title>Katie Walker, Software Engineer</title>
+                    <meta
+                        name='description'
+                        content='Katie Walker is a Nottingham, UK based Software Engineer, Public Speaker and Community Organiser.'
+                    />
+                    <meta name='keywords' content='Software Engineer, Nottingham' />
+                    <meta name='author' content='Katie Walker' />
+                    <meta
+                        name='viewport'
+                        content='width=device-width, initial-scale=1.0'
+                    />
+                    <link
+                        href='https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400&display=swap'
+                        rel='stylesheet'></link>
+                </Helmet>
+                <ThemeProvider theme={this.state.theme}>
+                    <GlobalStyle />
+                    <PageWrapper>
+                        <Header toggleTheme={this.toggleTheme} />
+                        <Content>
+                            <Switch>
+                                <Route exact path='/contact'>
+                                    <Contact />
+                                </Route>
+                                <Route path='*'>
+                                    <Home />
+                                </Route>
+                            </Switch>
+                        </Content>
+                        <Footer />
+                    </PageWrapper>
+                </ThemeProvider>
+            </AppWrapper>
+        );
+    }
 }
 
 const AppWrapper = styled.div`
