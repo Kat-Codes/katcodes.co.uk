@@ -135,7 +135,7 @@ const StyledField = styled(Field)`
     padding: 10px 5px;
     background: none;
     border: none;
-    color: black;
+    color: ${props => props.theme.colors.foreground};
     border-bottom: 1px solid black;
 `;
 

@@ -28,8 +28,7 @@ const StyledWrapper = styled.div`
 const Icon = styled.svg`
     height: 50px;
     width: 50px;
-    /* fill: black; */
-    stroke: black;
+    stroke: ${props => props.theme.colors.foreground};
     margin: 0;
     padding: 0 5px;
     transition: 200ms;

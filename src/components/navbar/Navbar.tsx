@@ -22,7 +22,6 @@ const NavWrapper = styled.div`
 `;
 
 const NavBar = styled.nav`
-    color: black;
     z-index: 10;
 `;
 

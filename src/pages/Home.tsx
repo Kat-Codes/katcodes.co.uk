@@ -40,7 +40,7 @@ const LinkButton = styled(Link)`
     border: solid 2px black;
     display: inline-block;
     padding: 10px 20px;
-    color: black;
+    color: ${props => props.theme.colors.foreground};
     background: none;
     font-size: 16px;
     transition: all 0.2s ease;
@@ -48,8 +48,8 @@ const LinkButton = styled(Link)`
     cursor: pointer;
 
     &:hover {
-        background: black;
-        color: white;
+        background: ${props => props.theme.colors.foreground};
+        color: ${props => props.theme.colors.background};
     }
 `;
 

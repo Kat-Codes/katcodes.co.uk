@@ -15,17 +15,9 @@ class Contact extends React.Component {
 
     render() {
         return (
-            <>
-                {/* <Title>Hello</Title> */}
-                <ContactForm />
-            </>
+            <ContactForm />
         )
 
     }
 }
-
-// const Title = styled.h2`
-//     margin-top: 125px;
-// `;
-
 export default Contact;

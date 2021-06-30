@@ -89,7 +89,7 @@ const NavLinks = styled.ul`
 
 const StyledLink = styled(Link)`
     font-size: 1.4rem;
-    color: black;
+    color: ${props => props.theme.colors.foreground};
     line-height: 1.5;
     text-transform: uppercase;
     text-decoration: none;
@@ -105,7 +105,7 @@ const StyledLink = styled(Link)`
         display: block;
         margin-top: 5px;
         right: 0;
-        background: black;
+        background: ${props => props.theme.colors.foreground};
 
         transition: width 0.2s ease;
         -webkit-transition: width 0.2s ease;

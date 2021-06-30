@@ -57,7 +57,7 @@ const Wrapper = styled.div`
     display: block;
 
     & span {
-        background: black;
+        background: ${props => props.theme.colors.foreground};
         display: block;
         position: relative;
         width: 50px;

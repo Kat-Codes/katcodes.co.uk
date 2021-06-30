@@ -57,8 +57,7 @@ type ColumnProps = {
 
 const StyledFooter = styled.footer`
     width: 100%;
-    background: #ddd;
-    /* border-top: solid black 2px; */
+    background: ${props => props.theme.colors.footer};
     padding: 30px 0;
 `;
 
@@ -66,7 +65,6 @@ const Content = styled.div`
     width: 90%;
     margin: 0 auto;
     max-width: 1000px;
-    color: #333;
     display: flex;
     justify-content: space-evenly;
 `;
