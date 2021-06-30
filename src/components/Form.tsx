@@ -76,6 +76,7 @@ class ContactForm extends React.Component<{}, AppState> {
                 }}>
                 {() => (
                     <StyledForm
+                        id="contact-form"
                         name='contact-demo'
                         className='contactForm'
                         data-netlify={true}>

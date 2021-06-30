@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Icon, IconWrapper } from './Icon';
 
 const SocialLinks = () => (
-    <StyledLinks>
+    <>
         <IconWrapper to='https://github.com/kat-codes' label='GitHub link'>
             <Icon
                 xmlns='http://www.w3.org/2000/svg'
@@ -51,13 +51,7 @@ const SocialLinks = () => (
                 <circle cx='4' cy='4' r='2'></circle>
             </Icon>
         </IconWrapper>
-    </StyledLinks>
+    </>
 );
 
 export default SocialLinks;
-
-const StyledLinks = styled.div`
-    @media only screen and (max-width: 600px) {
-        /* display: none; */
-    }
-`;

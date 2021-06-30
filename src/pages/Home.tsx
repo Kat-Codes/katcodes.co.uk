@@ -8,14 +8,14 @@ class Home extends React.Component {
     render() {
         return (
             <TitleContainer>
-                <Title>
+                <Title id="homepage-title">
                     Good <Time />, I'm Katie
                 </Title>
                 <p>
                     I’m a UK based Software Engineer, working at Capital One in
                     a back-end services team.
                 </p>
-                <LinkButton to='/contact'>Say hello</LinkButton>
+                <LinkButton to='/contact' data-qa-id="hello-btn">Say hello</LinkButton>
             </TitleContainer>
         );
     }
