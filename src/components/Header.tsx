@@ -4,9 +4,9 @@ import Navbar from './navbar/Navbar';
 import ToggleSwitch from './ToggleSwitch';
 import SocialLinks from './SocialLinks';
 
-const Header = (props: { toggleTheme: Function }) => {
+const Header = (props: { toggleTheme: Function, toggleState: boolean }) => {
     const [open, setOpen] = useState(false);
-    const [toggle, setToggle] = useState(false);
+    const [toggle, setToggle] = useState(props.toggleState);
 
     const handleNavbar = () => {
         setOpen(!open);
@@ -20,8 +20,8 @@ const Header = (props: { toggleTheme: Function }) => {
     return (
         <StyledHeader>
             <Navbar navbarState={open} handleNavbar={handleNavbar} />
-            <ToggleSwitch toggleState={toggle} toggleSwitch={toggleSwitch} />
             <SocialLinks />
+            <ToggleSwitch toggleState={toggle} toggleSwitch={toggleSwitch} />
         </StyledHeader>
     );
 };

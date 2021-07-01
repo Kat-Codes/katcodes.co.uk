@@ -4,7 +4,6 @@ import styled from "styled-components";
 let toggle;
 
 const ToggleButton = ({ toggleState, toggleSwitch }: ToggleProps) => {
-
     const sendClickEvent = () => {
         toggleSwitch();
     };
@@ -14,10 +13,10 @@ const ToggleButton = ({ toggleState, toggleSwitch }: ToggleProps) => {
             <div onClick={sendClickEvent} className={`wrg-toggle ${toggleState ? 'wrg-toggle--checked' : ''}`}>
                 <div className="wrg-toggle-container">
                     <div className="wrg-toggle-check">
-                        <span>🌜</span>
+                        <span></span>
                     </div>
                     <div className="wrg-toggle-uncheck">
-                        <span>🌞</span>
+                        <span></span>
                     </div>
                 </div>
                 <div className="wrg-toggle-circle"></div>

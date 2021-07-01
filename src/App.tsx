@@ -12,16 +12,22 @@ import Header from './components/Header';
 class App extends React.Component<{}, { toggleState: boolean, theme: DefaultTheme }> {
     constructor(props: any) {
         super(props)
-        this.state = { toggleState: false, theme: lightTheme };
+
+        const query = "(prefers-color-scheme: dark)";
+        const localStorageKey = "colorScheme";
+
+        const theme = window.localStorage.getItem(localStorageKey) || (window.matchMedia(query).matches ? "dark" : "light");
+
+        this.state = { toggleState: theme === 'dark', theme: theme === 'light' ? lightTheme : darkTheme };
     }
 
     toggleTheme = (toggle: boolean) => {
         if (toggle) {
-            this.setState({theme: lightTheme})
+            this.setState({ theme: lightTheme })
         } else {
-            this.setState({theme: darkTheme})
+            this.setState({ theme: darkTheme })
         }
-    } 
+    }
 
     render() {
         return (
@@ -46,7 +52,7 @@ class App extends React.Component<{}, { toggleState: boolean, theme: DefaultThem
                 <ThemeProvider theme={this.state.theme}>
                     <GlobalStyle />
                     <PageWrapper>
-                        <Header toggleTheme={this.toggleTheme} />
+                        <Header toggleTheme={this.toggleTheme} toggleState={this.state.toggleState}/>
                         <Content>
                             <Switch>
                                 <Route exact path='/contact'>

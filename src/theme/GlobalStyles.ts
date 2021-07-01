@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
     background-color: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.foreground};
+    transition: all 0.3s linear;
   }
 
   a {
