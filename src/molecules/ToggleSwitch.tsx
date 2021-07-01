@@ -2,53 +2,45 @@ import React from 'react';
 import styled from "styled-components";
 
 const ToggleButton = ({ toggleState, toggleSwitch }: ToggleProps) => (
-    <ToggleSwitch>
-        <div onClick={() => toggleSwitch()} className={`wrg-toggle ${toggleState ? 'wrg-toggle--checked' : ''}`}>
-            <div className="wrg-toggle-container">
-                <div className="wrg-toggle-check">
-                    <span></span>
-                </div>
-                <div className="wrg-toggle-uncheck">
-                    <span></span>
-                </div>
-            </div>
-            <div className="wrg-toggle-circle"></div>
-            <input className="wrg-toggle-input" type="checkbox" aria-label="Toggle Button" />
+  <ToggleSwitch>
+    <div onClick={() => toggleSwitch()} className={`wrg-toggle ${toggleState ? 'wrg-toggle--checked' : ''}`}>
+      <div className="wrg-toggle-container">
+        <div className="wrg-toggle-check">
+          <span></span>
         </div>
-    </ToggleSwitch>
+        <div className="wrg-toggle-uncheck">
+          <span></span>
+        </div>
+      </div>
+      <div className="wrg-toggle-circle"></div>
+      <input className="wrg-toggle-input" type="checkbox" aria-label="Toggle Button" />
+    </div>
+  </ToggleSwitch>
 )
 
 
 type ToggleProps = {
-    toggleState: boolean;
-    toggleSwitch: Function;
+  toggleState: boolean;
+  toggleSwitch: Function;
 };
 
 const ToggleSwitch = styled.div`
- touch-action: pan-x;
   display: inline-block;
   position: relative;
   cursor: pointer;
   background-color: transparent;
   border: 0;
   padding: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-tap-highlight-color: transparent;
-
 
 .wrg-toggle-input {
   border: 0;
   clip: rect(0 0 0 0);
-  height: 1px;
+  height: 25px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px;
+  width: 50px;
 }
 
 .wrg-toggle-check, .wrg-toggle-uncheck {

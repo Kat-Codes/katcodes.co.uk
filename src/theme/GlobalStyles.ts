@@ -30,6 +30,11 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     box-sizing: border-box;
   }
+
+  *:focus {
+    outline: 1px dashed ${props => props.theme.colors.foreground};
+    opacity: 0.5;
+  }
 `;
 
 export default GlobalStyle;

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { device } from '../utils/breakpoints';
 import Title from '../atoms/Title';
+import Button from '../atoms/Button';
 
 class Home extends React.Component {
     render() {
@@ -15,7 +16,9 @@ class Home extends React.Component {
                     I’m a UK based Software Engineer, working at Capital One in
                     a back-end services team.
                 </p>
-                <LinkButton to='/contact' data-qa-id="hello-btn">Say hello</LinkButton>
+                <Link to='/contact' >
+                    <Button data-qa-id="hello-btn">Say hello</Button>
+                </Link>
             </TitleContainer>
         );
     }
@@ -36,29 +39,13 @@ const Time = () => {
     return <StyledTime>{message}</StyledTime>;
 };
 
-const LinkButton = styled(Link)`
-    border: solid 2px ${props => props.theme.colors.foreground};
-    display: inline-block;
-    padding: 10px 20px;
-    color: ${props => props.theme.colors.foreground};
-    background: none;
-    font-size: 16px;
-    transition: all 0.2s ease;
-    font-family: inherit;
-    cursor: pointer;
-
-    &:hover {
-        background: ${props => props.theme.colors.foreground};
-        color: ${props => props.theme.colors.background};
-    }
-`;
-
 const StyledTime = styled.span`
     text-decoration: underline;
 `;
 
 const TitleContainer = styled.div`
     width: 100%;
+    padding: 125px 0px;
 
     > * {
         margin: 10px 0px;

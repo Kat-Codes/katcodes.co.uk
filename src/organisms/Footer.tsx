@@ -1,43 +1,18 @@
 import styled from 'styled-components';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import TextLink from '../atoms/TextLink';
 
 const Footer = () => (
     <StyledFooter>
         <Content>
             <Column title='Navigate'>
-                <p>
-                    <Link to='/'>Home</Link>
-                </p>
-                <p>
-                    <Link to='/contact'>Contact</Link>
-                </p>
+                <TextLink to="/" internal>Home</TextLink>
+                <TextLink to="/contact" internal>Contact</TextLink>
             </Column>
             <Column title='Connect'>
-                <p>
-                    <a
-                        href='https://github.com/kat-codes'
-                        target='_blank'
-                        rel='noopener noreferrer'>
-                        GitHub
-                    </a>
-                </p>
-                <p>
-                    <a
-                        href='https://twitter.com/katcodes'
-                        target='_blank'
-                        rel='noopener noreferrer'>
-                        Twitter
-                    </a>
-                </p>
-                <p>
-                    <a
-                        href='https://www.linkedin.com/in/katcodes/'
-                        target='_blank'
-                        rel='noopener noreferrer'>
-                        LinkedIn
-                    </a>
-                </p>
+                <TextLink to='https://github.com/kat-codes' internal={false}>GitHub</TextLink>
+                <TextLink to='https://twitter.com/katcodes' internal={false}>Twitter</TextLink>
+                <TextLink to='https://www.linkedin.com/in/katcodes/' internal={false}>LinkedIn</TextLink>
             </Column>
         </Content>
     </StyledFooter>
@@ -52,7 +27,7 @@ const Column = ({ title, children }: ColumnProps) => (
 
 type ColumnProps = {
     title: String;
-    children: React.ReactNode
+    children: React.ReactNode;
 }
 
 const StyledFooter = styled.footer`
@@ -70,19 +45,14 @@ const Content = styled.div`
 `;
 
 const StyledColumn = styled.div`
+    display: flex;
+    flex-direction: column;
 
     h2 {
         font-size: 14px;
         padding: 10px 0;
         text-transform: uppercase;
     }
-
-    p {
-    color: ${props => props.theme.colors.foreground};
-        font-size: 14px;
-        text-decoration: underline;
-    }
-
 `;
 
 export default Footer;

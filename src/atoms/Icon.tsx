@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import { device } from '../utils/breakpoints';
 
 const IconWrapper = ({ to, children, label }: WrapperProps) => (
-    <StyledWrapper>
-        <a
+    <StyledWrapper role="link" tabIndex={0}>
+        <IconLink
             href={to}
-            aria-label={label}
+            aria-label="link"
             target='_blank'
             rel='noopener noreferrer'>
             {children}
-        </a>
+        </IconLink>
     </StyledWrapper>
 );
 
@@ -25,20 +25,22 @@ const StyledWrapper = styled.div`
     cursor: pointer;
 `;
 
+const IconLink = styled.a`
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+`;
+
 const Icon = styled.svg`
     height: 50px;
     width: 50px;
     stroke: ${props => props.theme.colors.foreground};
-    margin: 0;
     padding: 0 5px;
     transition: 200ms;
 
     ${StyledWrapper}:hover & {
         stroke: #aaa;
-    }
-
-    @media ${device.tablet} {
-        margin-right: 10px;
     }
 `;
 

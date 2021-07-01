@@ -29,7 +29,7 @@ const BurgerMenu = ({ navbarState, handleNavbar }: MenuProps) => {
     updateMenu();
 
     return (
-        <Wrapper onClick={sendClickEvent}>
+        <Wrapper onClick={sendClickEvent} tab-index="0" aria-label="Toggle Navigation Menu" aria-expanded={navbarState}>
             <FlexWrapper className={navbarState ? 'open' : ''}>
                 <span className='one'>&nbsp;</span>
                 <span className='two'>&nbsp;</span>
@@ -51,7 +51,9 @@ const FlexWrapper = styled.div`
     height: 30px;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.button`
+    background: none;
+    border: none;  
     position: relative;
     cursor: pointer;
     display: block;
