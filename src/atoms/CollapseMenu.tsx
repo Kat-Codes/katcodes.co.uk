@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import gsap from 'gsap';
 import { Link } from 'react-router-dom';
 
-
 const common = {
     duration: 0.8,
     ease: "expo.out"
@@ -60,8 +59,6 @@ type MenuProps = {
     navbarState: boolean;
     handleNavbar: Function;
 };
-
-export default CollapseMenu;
 
 const CollapseWrapper = styled.div`
     background: ${props => props.theme.colors.mid};
@@ -121,3 +118,5 @@ const StyledLink = styled(Link)`
         left: 0;
     }
 `;
+
+export default CollapseMenu;
