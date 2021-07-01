@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { device } from '../utils/breakpoints';
-import Title from '../components/Title';
+import Title from '../atoms/Title';
 
 class Home extends React.Component {
     render() {

@@ -6,8 +6,8 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import { lightTheme, darkTheme } from './theme/theme';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Footer from './organisms/Footer';
+import Header from './organisms/Header';
 
 class App extends React.Component<{}, { toggleState: boolean, theme: DefaultTheme }> {
     constructor(props: any) {

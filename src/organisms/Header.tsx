@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Navbar from './navbar/Navbar';
-import ToggleSwitch from './ToggleSwitch';
-import SocialLinks from './SocialLinks';
+import Navbar from '../molecules/Navbar';
+import ToggleSwitch from '../molecules/ToggleSwitch';
+import SocialLinks from '../molecules/SocialLinks';
 
 const Header = (props: { toggleTheme: Function, toggleState: boolean }) => {
     const [open, setOpen] = useState(false);

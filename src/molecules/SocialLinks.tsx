@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon, IconWrapper } from './Icon';
+import { Icon, IconWrapper } from '../atoms/Icon';
 
 const SocialLinks = () => (
     <div>

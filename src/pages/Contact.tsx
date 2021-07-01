@@ -1,7 +1,6 @@
 import React from 'react';
-// import styled from 'styled-components';
 import gsap from 'gsap';
-import ContactForm from '../components/Form';
+import ContactForm from '../organisms/Form';
 
 class Contact extends React.Component {
     componentDidMount() {

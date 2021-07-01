@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import styled from 'styled-components';
-import Button from './Button';
+import Button from '../atoms/Button';
 
 const encode = (data: any) => {
     return Object.keys(data)
