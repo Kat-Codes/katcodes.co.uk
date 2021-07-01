@@ -6,8 +6,8 @@ const size = {
 };
 
 export const device = {
-    tablet: `(min-width: ${size.tablet})`,
-    smDesktop: `(min-width: ${size.smDesktop})`,
-    desktop: `(min-width: ${size.desktop})`,
-    lgDesktop: `(min-width: ${size.lgDesktop})`,
+    tablet: `@media (min-width: ${size.tablet})`,
+    smDesktop: `@media (min-width: ${size.smDesktop})`,
+    desktop: `@media (min-width: ${size.desktop})`,
+    lgDesktop: `@media (min-width: ${size.lgDesktop})`,
 };

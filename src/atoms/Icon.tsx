@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { device } from '../utils/breakpoints';
 
 const IconWrapper = ({ to, children, label }: WrapperProps) => (
     <StyledWrapper role="link" tabIndex={0}>

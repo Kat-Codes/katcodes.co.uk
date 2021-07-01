@@ -51,7 +51,7 @@ const TitleContainer = styled.div`
         margin: 10px 0px;
     }
 
-    @media ${device.tablet} {
+    ${device.tablet} {
         width: 50%;
     }
 `;
