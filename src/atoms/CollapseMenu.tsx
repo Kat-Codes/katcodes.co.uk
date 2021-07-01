@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 
-import { Link } from 'react-router-dom';
 
 const common = {
     duration: 0.8,

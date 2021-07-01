@@ -1,11 +1,12 @@
 import React from 'react';
 import styled, { DefaultTheme, ThemeProvider } from 'styled-components';
-import { Helmet } from 'react-helmet';
-import GlobalStyle from './theme/GlobalStyles';
 import { Route, Switch } from 'react-router-dom';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
+import { Helmet } from 'react-helmet';
+
+import GlobalStyle from './theme/GlobalStyles';
 import { lightTheme, darkTheme } from './theme/theme';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
 import Footer from './organisms/Footer';
 import Header from './organisms/Header';
 

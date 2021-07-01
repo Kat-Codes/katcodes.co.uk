@@ -45,7 +45,7 @@ const Footer = () => (
 
 const Column = ({ title, children }: ColumnProps) => (
     <StyledColumn>
-        <h5>{title}-</h5>
+        <h2>{title}-</h2>
         {children}
     </StyledColumn>
 );
@@ -71,7 +71,8 @@ const Content = styled.div`
 
 const StyledColumn = styled.div`
 
-    h5 {
+    h2 {
+        font-size: 14px;
         padding: 10px 0;
         text-transform: uppercase;
     }

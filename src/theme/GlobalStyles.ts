@@ -2,8 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    borderRadius: string;
-
     colors: {
       foreground: string;
       background: string;
