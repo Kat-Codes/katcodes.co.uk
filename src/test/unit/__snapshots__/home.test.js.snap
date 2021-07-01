@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page should render the home page as expected 1`] = `
+<div
+  className="sc-hKFyIo hksCOE"
+>
+  <h1
+    className="sc-bdnylx cIUsGU"
+    id="homepage-title"
+  >
+    Good 
+    <span
+      className="sc-dlnjPT hHfEOI"
+    >
+      evening
+    </span>
+    , I'm Katie
+  </h1>
+  <p>
+    I’m a UK based Software Engineer, working at Capital One in a back-end services team.
+  </p>
+  <a
+    href="/contact"
+    onClick={[Function]}
+  >
+    <button
+      className="sc-gtssRu hMfBxW"
+      data-qa-id="hello-btn"
+    >
+      Say hello
+    </button>
+  </a>
+</div>
+`;

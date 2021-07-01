@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { DefaultTheme, ThemeProvider } from 'styled-components';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import GlobalStyle from './theme/GlobalStyles';
@@ -23,7 +23,7 @@ class App extends React.Component<{}, { toggleState: boolean, theme: DefaultThem
     }
 
     toggleTheme = (toggle: boolean) => {
-        this.setState({theme: toggle ? lightTheme : darkTheme})
+        this.setState({ theme: toggle ? lightTheme : darkTheme })
     }
 
     render() {
@@ -49,16 +49,18 @@ class App extends React.Component<{}, { toggleState: boolean, theme: DefaultThem
                 <ThemeProvider theme={this.state.theme}>
                     <GlobalStyle />
                     <PageWrapper>
-                        <Header toggleTheme={this.toggleTheme} toggleState={this.state.toggleState}/>
+                        <Header toggleTheme={this.toggleTheme} toggleState={this.state.toggleState} />
                         <Content>
-                            <Switch>
-                                <Route exact path='/contact'>
-                                    <Contact />
-                                </Route>
-                                <Route path='*'>
-                                    <Home />
-                                </Route>
-                            </Switch>
+                            <Router>
+                                <Switch>
+                                    <Route exact path='/contact'>
+                                        <Contact />
+                                    </Route>
+                                    <Route path='*'>
+                                        <Home />
+                                    </Route>
+                                </Switch>
+                            </Router>
                         </Content>
                         <Footer />
                     </PageWrapper>
