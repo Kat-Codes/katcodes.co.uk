@@ -22,11 +22,7 @@ class App extends React.Component<{}, { toggleState: boolean, theme: DefaultThem
     }
 
     toggleTheme = (toggle: boolean) => {
-        if (toggle) {
-            this.setState({ theme: lightTheme })
-        } else {
-            this.setState({ theme: darkTheme })
-        }
+        this.setState({theme: toggle ? lightTheme : darkTheme})
     }
 
     render() {

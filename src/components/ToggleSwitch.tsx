@@ -1,30 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from "styled-components";
 
-let toggle;
-
-const ToggleButton = ({ toggleState, toggleSwitch }: ToggleProps) => {
-    const sendClickEvent = () => {
-        toggleSwitch();
-    };
-
-    return (
-        <ToggleSwitch>
-            <div onClick={sendClickEvent} className={`wrg-toggle ${toggleState ? 'wrg-toggle--checked' : ''}`}>
-                <div className="wrg-toggle-container">
-                    <div className="wrg-toggle-check">
-                        <span></span>
-                    </div>
-                    <div className="wrg-toggle-uncheck">
-                        <span></span>
-                    </div>
+const ToggleButton = ({ toggleState, toggleSwitch }: ToggleProps) => (
+    <ToggleSwitch>
+        <div onClick={() => toggleSwitch()} className={`wrg-toggle ${toggleState ? 'wrg-toggle--checked' : ''}`}>
+            <div className="wrg-toggle-container">
+                <div className="wrg-toggle-check">
+                    <span></span>
                 </div>
-                <div className="wrg-toggle-circle"></div>
-                <input className="wrg-toggle-input" type="checkbox" aria-label="Toggle Button" />
+                <div className="wrg-toggle-uncheck">
+                    <span></span>
+                </div>
             </div>
-        </ToggleSwitch>
-    )
-}
+            <div className="wrg-toggle-circle"></div>
+            <input className="wrg-toggle-input" type="checkbox" aria-label="Toggle Button" />
+        </div>
+    </ToggleSwitch>
+)
+
 
 type ToggleProps = {
     toggleState: boolean;
