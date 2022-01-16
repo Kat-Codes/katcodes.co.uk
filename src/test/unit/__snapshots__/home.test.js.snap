@@ -2,29 +2,29 @@
 
 exports[`Home page should render the home page as expected 1`] = `
 <div
-  className="sc-hKFyIo hksCOE"
+  className="sc-hKwDye ejmpwc"
 >
   <h1
-    className="sc-bdnylx cIUsGU"
+    className="sc-bdvvtL fOrCqx"
     id="homepage-title"
   >
     Good 
     <span
-      className="sc-dlnjPT hHfEOI"
+      className="sc-dkPtRN dmoJZt"
     >
       evening
     </span>
     , I'm Katie
   </h1>
   <p>
-    I’m a UK based Software Engineer, working at Capital One in a back-end services team.
+    I’m a UK based Senior Full-stack Engineer, working at Collective Benefits.
   </p>
   <a
     href="/contact"
     onClick={[Function]}
   >
     <button
-      className="sc-gtssRu hMfBxW"
+      className="sc-gsDKAQ cyLTGH"
       data-qa-id="hello-btn"
     >
       Say hello

@@ -1,55 +1,54 @@
-import React from 'react';
-import { Link, Router } from 'react-router-dom';
-import styled from 'styled-components';
-import { device } from '../utils/breakpoints';
-import Title from '../atoms/Title';
-import Button from '../atoms/Button';
+import React from "react";
+import { Link, Router } from "react-router-dom";
+import styled from "styled-components";
+import { device } from "../utils/breakpoints";
+import Title from "../atoms/Title";
+import Button from "../atoms/Button";
 
 const Home = () => (
-    <TitleContainer>
-        <Title id="homepage-title">
-            Good <Time />, I'm Katie
-        </Title>
-        <p>
-            I’m a UK based Software Engineer, working at Capital One in
-            a back-end services team.
-        </p>
-        <Link to='/contact' >
-            <Button data-qa-id="hello-btn">Say hello</Button>
-        </Link>
-    </TitleContainer>
+  <TitleContainer>
+    <Title id="homepage-title">
+      Good <Time />, I'm Katie
+    </Title>
+    <p>
+      I’m a UK based Senior Full-stack Engineer, working at Collective Benefits.
+    </p>
+    <Link to="/contact">
+      <Button data-qa-id="hello-btn">Say hello</Button>
+    </Link>
+  </TitleContainer>
 );
 
 const Time = () => {
-    let message;
-    const date = new Date();
-    const hour = date.getHours();
+  let message;
+  const date = new Date();
+  const hour = date.getHours();
 
-    if (hour < 12) {
-        message = 'morning';
-    } else if (hour < 18) {
-        message = 'afternoon';
-    } else {
-        message = 'evening';
-    }
-    return <StyledTime>{message}</StyledTime>;
+  if (hour < 12) {
+    message = "morning";
+  } else if (hour < 18) {
+    message = "afternoon";
+  } else {
+    message = "evening";
+  }
+  return <StyledTime>{message}</StyledTime>;
 };
 
 const StyledTime = styled.span`
-    text-decoration: underline;
+  text-decoration: underline;
 `;
 
 const TitleContainer = styled.div`
-    width: 100%;
-    padding: 125px 0px;
+  width: 100%;
+  padding: 125px 0px;
 
-    > * {
-        margin: 10px 0px;
-    }
+  > * {
+    margin: 10px 0px;
+  }
 
-    ${device.tablet} {
-        width: 50%;
-    }
+  ${device.tablet} {
+    width: 50%;
+  }
 `;
 
 export default Home;

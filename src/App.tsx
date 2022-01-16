@@ -42,9 +42,9 @@ class App extends React.Component<
           <title>Katie Walker, Software Engineer</title>
           <meta
             name="description"
-            content="Katie Walker is a Nottingham, UK based Software Engineer, Public Speaker and Community Organiser."
+            content="Katie Walker is a UK based Senior Full-stack Engineer, Public Speaker and Community Organiser."
           />
-          <meta name="keywords" content="Software Engineer, Nottingham" />
+          <meta name="keywords" content="Senior Full-stack Engineer, UK" />
           <meta name="author" content="Katie Walker" />
           <meta
             name="viewport"
