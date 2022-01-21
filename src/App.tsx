@@ -1,4 +1,4 @@
-import React from "react";
+import { Component } from "react";
 import styled, { DefaultTheme, ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -10,11 +10,13 @@ import Home from "./pages/Home";
 import Footer from "./organisms/Footer";
 import Header from "./organisms/Header";
 
-class App extends React.Component<
-  Record<string, never>,
-  { toggleState: boolean; theme: DefaultTheme }
-> {
-  constructor(props: any) {
+interface State {
+  toggleState: boolean;
+  theme: DefaultTheme;
+}
+
+class App extends Component<Record<string, never>, State> {
+  constructor(props: Record<string, never>) {
     super(props);
 
     const query = "(prefers-color-scheme: dark)";
