@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
 
@@ -6,7 +6,15 @@ const commonAnim = {
   duration: 0.1,
 };
 
-const BurgerMenu = ({ navbarState, handleNavbar }: MenuProps) => {
+type MenuProps = {
+  navbarState: boolean;
+  handleNavbar: () => void;
+};
+
+const BurgerMenu: FunctionComponent<MenuProps> = ({
+  navbarState,
+  handleNavbar,
+}) => {
   const tl = gsap.timeline();
 
   const sendClickEvent = () => {
@@ -42,11 +50,6 @@ const BurgerMenu = ({ navbarState, handleNavbar }: MenuProps) => {
       </FlexWrapper>
     </Wrapper>
   );
-};
-
-type MenuProps = {
-  navbarState: boolean;
-  handleNavbar: () => void;
 };
 
 const FlexWrapper = styled.div`

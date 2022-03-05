@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import TextLink from "../atoms/TextLink";
 
-const Footer = () => (
+const Footer = (): JSX.Element => (
   <StyledFooter>
     <Content>
       <Column title="Navigate">

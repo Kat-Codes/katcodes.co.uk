@@ -1,21 +1,19 @@
-import React from 'react';
-import gsap from 'gsap';
-import ContactForm from '../organisms/Form';
+import React from "react";
+import gsap from "gsap";
+import ContactForm from "../organisms/Form";
 
 class Contact extends React.Component {
-    componentDidMount() {
-        this.animate();
-    }
+  componentDidMount(): void {
+    this.animate();
+  }
 
-    animate = () => {
-        const tl = gsap.timeline();
-        tl.to('.contactForm', { y: -25, opacity: 1 });
-    };
+  animate = (): void => {
+    const tl = gsap.timeline();
+    tl.to(".contactForm", { y: -25, opacity: 1 });
+  };
 
-    render() {
-        return (
-            <ContactForm />
-        )
-    }
+  render(): JSX.Element {
+    return <ContactForm />;
+  }
 }
 export default Contact;

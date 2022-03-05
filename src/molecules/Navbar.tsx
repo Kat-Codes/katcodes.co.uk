@@ -3,7 +3,7 @@ import styled from "styled-components";
 import BurgerMenu from "../atoms/BurgerMenu";
 import CollapseMenu from "../atoms/CollapseMenu";
 
-const Navbar = ({ navbarState, handleNavbar }: NavbarProps) => (
+const Navbar = ({ navbarState, handleNavbar }: NavbarProps): JSX.Element => (
   <NavWrapper>
     <CollapseMenu navbarState={navbarState} handleNavbar={handleNavbar} />
     <NavBar>

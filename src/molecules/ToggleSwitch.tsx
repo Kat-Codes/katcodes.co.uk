@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const ToggleButton = ({ toggleState, toggleSwitch }: ToggleProps) => (
+const ToggleButton = ({
+  toggleState,
+  toggleSwitch,
+}: ToggleProps): JSX.Element => (
   <ToggleSwitch>
     <div
       onClick={() => toggleSwitch()}

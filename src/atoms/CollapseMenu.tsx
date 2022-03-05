@@ -8,7 +8,10 @@ const common = {
   ease: "expo.out",
 };
 
-const CollapseMenu = ({ handleNavbar, navbarState }: MenuProps) => {
+const CollapseMenu = ({
+  handleNavbar,
+  navbarState,
+}: MenuProps): JSX.Element => {
   const tl = gsap.timeline();
 
   const sendClickEvent = () => {

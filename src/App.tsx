@@ -32,11 +32,11 @@ class App extends Component<Record<string, never>, State> {
     };
   }
 
-  toggleTheme = (toggle: boolean) => {
+  toggleTheme = (toggle: boolean): void => {
     this.setState({ theme: toggle ? lightTheme : darkTheme });
   };
 
-  render() {
+  render(): JSX.Element {
     return (
       <AppWrapper>
         <Helmet>

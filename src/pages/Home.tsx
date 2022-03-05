@@ -1,11 +1,11 @@
-import React from "react";
-import { Link, Router } from "react-router-dom";
+import React, { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../utils/breakpoints";
 import Title from "../atoms/Title";
 import Button from "../atoms/Button";
 
-const Home = () => (
+const Home: FunctionComponent = () => (
   <TitleContainer>
     <Title id="homepage-title">
       Good <Time />, I'm Katie
@@ -21,8 +21,7 @@ const Home = () => (
 
 const Time = () => {
   let message;
-  const date = new Date();
-  const hour = date.getHours();
+  const hour = new Date().getHours();
 
   if (hour < 12) {
     message = "morning";

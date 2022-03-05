@@ -7,7 +7,7 @@ import SocialLinks from "../molecules/SocialLinks";
 const Header = (props: {
   toggleTheme: (value: boolean) => void;
   toggleState: boolean;
-}) => {
+}): JSX.Element => {
   const [open, setOpen] = useState(false);
   const [toggle, setToggle] = useState(props.toggleState);
 
