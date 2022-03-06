@@ -1,6 +1,7 @@
 {
   "name": "katcodes.co.uk",
   "version": "0.1.0",
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "tsc && react-scripts build",

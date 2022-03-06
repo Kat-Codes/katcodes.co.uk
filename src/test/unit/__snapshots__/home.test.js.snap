@@ -12,7 +12,7 @@ exports[`Home page should render the home page as expected 1`] = `
     <span
       className="sc-dkPtRN dmoJZt"
     >
-      evening
+      morning
     </span>
     , I'm Katie
   </h1>
@@ -24,7 +24,7 @@ exports[`Home page should render the home page as expected 1`] = `
     onClick={[Function]}
   >
     <button
-      className="sc-gsDKAQ cyLTGH"
+      className="sc-gsDKAQ fhvAAj"
       data-qa-id="hello-btn"
     >
       Say hello
