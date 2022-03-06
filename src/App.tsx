@@ -60,22 +60,22 @@ class App extends Component<Record<string, never>, State> {
         <ThemeProvider theme={this.state.theme}>
           <GlobalStyle />
           <PageWrapper>
-            <Header
-              toggleTheme={this.toggleTheme}
-              toggleState={this.state.toggleState}
-            />
-            <Content>
-              <Router>
+            <Router>
+              <Header
+                toggleTheme={this.toggleTheme}
+                toggleState={this.state.toggleState}
+              />
+              <Content>
                 <Switch>
-                  <Route exact path="/contact">
+                  <Route path="/contact">
                     <Contact />
                   </Route>
                   <Route path="*">
                     <Home />
                   </Route>
                 </Switch>
-              </Router>
-            </Content>
+              </Content>
+            </Router>
             <Footer />
           </PageWrapper>
         </ThemeProvider>
