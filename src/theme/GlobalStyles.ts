@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
       foreground: string;
@@ -13,15 +13,19 @@ declare module 'styled-components' {
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Space Mono', monospace;
-
-    background-color: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.foreground};
+    background-color: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.foreground};
     transition: all 0.3s linear;
   }
 
   a {
     text-decoration: none;
-    color: ${props => props.theme.colors.foreground};
+    color: ${(props) => props.theme.colors.foreground};
+  }
+  
+  h1, h2, h3, h4, h6 {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: unset;
   }
 
   * {
@@ -32,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   *:focus {
-    outline: 1px dashed ${props => props.theme.colors.foreground};
+    outline: 1px dashed ${(props) => props.theme.colors.foreground};
     opacity: 0.5;
   }
 `;

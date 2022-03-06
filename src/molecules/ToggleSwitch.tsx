@@ -88,7 +88,7 @@ const ToggleSwitch = styled.div`
     height: 24px;
     padding: 0;
     border-radius: 30px;
-    background-color: #4d4d4d;
+    background-color: ${(props) => props.theme.colors.foreground};
     transition: all 0.2s ease;
   }
 
@@ -99,9 +99,9 @@ const ToggleSwitch = styled.div`
     left: 1px;
     width: 22px;
     height: 22px;
-    border: 1px solid #4d4d4d;
+    border: 1px solid ${(props) => props.theme.colors.foreground};
     border-radius: 50%;
-    background-color: #fafafa;
+    background-color: ${(props) => props.theme.colors.background};
     box-sizing: border-box;
     transition: all 0.25s ease;
   }

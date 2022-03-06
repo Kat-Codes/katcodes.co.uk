@@ -1,6 +1,11 @@
 import styled from "styled-components";
-import React from "react";
+import { ReactNode } from "react";
 import TextLink from "../atoms/TextLink";
+
+type ColumnProps = {
+  title: string;
+  children: ReactNode;
+};
 
 const Footer = (): JSX.Element => (
   <StyledFooter>
@@ -35,23 +40,19 @@ const Column = ({ title, children }: ColumnProps) => (
   </StyledColumn>
 );
 
-type ColumnProps = {
-  title: string;
-  children: React.ReactNode;
-};
-
 const StyledFooter = styled.footer`
+  display: flex;
+  justify-content: center;
   width: 100%;
   background: ${(props) => props.theme.colors.mid};
   padding: 30px 0;
 `;
 
 const Content = styled.div`
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1000px;
   display: flex;
   justify-content: space-evenly;
+  width: 90%;
+  max-width: 1000px;
 `;
 
 const StyledColumn = styled.div`

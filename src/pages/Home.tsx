@@ -11,7 +11,7 @@ const Home: FunctionComponent = () => (
       Good <Time />, I'm Katie
     </Title>
     <p>
-      I’m a UK based Senior Full-stack Engineer, working at Collective Benefits.
+      I'm a UK based Senior Full-stack Engineer, working at Collective Benefits.
     </p>
     <Link to="/contact">
       <Button data-qa-id="hello-btn">Say hello</Button>
@@ -42,7 +42,7 @@ const TitleContainer = styled.div`
   padding: 125px 0px;
 
   > * {
-    margin: 10px 0px;
+    margin: 16px 0px;
   }
 
   ${device.tablet} {
