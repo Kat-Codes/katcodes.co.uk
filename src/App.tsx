@@ -19,21 +19,22 @@ class App extends Component<Record<string, never>, State> {
   constructor(props: Record<string, never>) {
     super(props);
 
-    const query = "(prefers-color-scheme: dark)";
-    const localStorageKey = "colorScheme";
+    let savedTheme = window.localStorage.getItem("theme");
 
-    const theme =
-      window.localStorage.getItem(localStorageKey) ||
-      (window.matchMedia(query).matches ? "dark" : "light");
+    if (!savedTheme) {
+      savedTheme = "light";
+      window.localStorage.setItem("theme", "light");
+    }
 
     this.state = {
-      toggleState: theme === "dark",
-      theme: theme === "light" ? lightTheme : darkTheme,
+      toggleState: savedTheme !== "light",
+      theme: savedTheme === "light" ? lightTheme : darkTheme,
     };
   }
 
   toggleTheme = (toggle: boolean): void => {
     this.setState({ theme: toggle ? lightTheme : darkTheme });
+    window.localStorage.setItem("theme", toggle ? "light" : "dark");
   };
 
   render(): JSX.Element {
