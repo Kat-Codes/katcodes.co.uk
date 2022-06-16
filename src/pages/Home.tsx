@@ -10,9 +10,7 @@ const Home: FunctionComponent = () => (
     <Title id="homepage-title">
       Good <Time />, I'm Katie
     </Title>
-    <p>
-      I'm a UK based Senior Full-stack Engineer, working at Collective Benefits.
-    </p>
+    <p>I'm a UK based Software Engineer working at Spotify 🎵</p>
     <Link to="/contact">
       <Button data-qa-id="hello-btn">Say hello</Button>
     </Link>

@@ -2,7 +2,7 @@
 
 exports[`Home page should render the home page as expected 1`] = `
 <div
-  className="sc-hKwDye ejmpwc"
+  className="sc-hKwDye jQoBYu"
 >
   <h1
     className="sc-bdvvtL fOrCqx"
@@ -12,12 +12,12 @@ exports[`Home page should render the home page as expected 1`] = `
     <span
       className="sc-dkPtRN dmoJZt"
     >
-      morning
+      afternoon
     </span>
     , I'm Katie
   </h1>
   <p>
-    I’m a UK based Senior Full-stack Engineer, working at Collective Benefits.
+    I'm a UK based Software Engineer working at Spotify 🎵
   </p>
   <a
     href="/contact"
