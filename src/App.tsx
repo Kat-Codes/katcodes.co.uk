@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Footer from "./organisms/Footer";
 import Header from "./organisms/Header";
+import Workspace from "./pages/Workspace";
 
 interface State {
   toggleState: boolean;
@@ -72,6 +73,9 @@ class App extends Component<Record<string, never>, State> {
                 <Switch>
                   <Route path="/contact">
                     <Contact />
+                  </Route>
+                  <Route path="/workspace">
+                    <Workspace />
                   </Route>
                   <Route path="*">
                     <Home />

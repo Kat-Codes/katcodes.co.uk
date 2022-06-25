@@ -1,6 +1,7 @@
 import React from "react";
 import gsap from "gsap";
 import ContactForm from "../organisms/Form";
+import StandardLayout from "../layouts/StandardLayout";
 
 class Contact extends React.Component {
   componentDidMount(): void {
@@ -13,7 +14,11 @@ class Contact extends React.Component {
   };
 
   render(): JSX.Element {
-    return <ContactForm />;
+    return (
+      <StandardLayout title="Contact Me">
+        <ContactForm />
+      </StandardLayout>
+    );
   }
 }
 export default Contact;

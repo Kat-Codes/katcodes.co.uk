@@ -2,14 +2,14 @@ import React, { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../utils/breakpoints";
-import Title from "../atoms/Title";
+import Heading from "../atoms/Heading";
 import Button from "../atoms/Button";
 
 const Home: FunctionComponent = () => (
   <TitleContainer>
-    <Title id="homepage-title">
+    <Heading id="homepage-title">
       Good <Time />, I'm Katie
-    </Title>
+    </Heading>
     <p>I'm a UK based Software Engineer working at Spotify 🎵</p>
     <Link to="/contact">
       <Button data-qa-id="hello-btn">Say hello</Button>
@@ -44,7 +44,7 @@ const TitleContainer = styled.div`
   }
 
   ${device.tablet} {
-    width: 50%;
+    width: 45%;
   }
 `;
 
