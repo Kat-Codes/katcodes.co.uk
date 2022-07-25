@@ -3,7 +3,9 @@ import Heading from "../atoms/Heading";
 
 const StandardLayout = ({ title, children }: Props) => (
   <div>
-    <Heading textAlign="center">{title}</Heading>
+    <Heading level="2" as="h1" textAlign="center" pb="30px">
+      {title}
+    </Heading>
     <main>{children}</main>
   </div>
 );

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import BurgerMenu from "../atoms/BurgerMenu";
-import CollapseMenu from "../atoms/CollapseMenu";
+import BurgerMenu from "../molecules/BurgerMenu";
+import CollapseMenu from "../molecules/CollapseMenu";
 
 const Navbar = ({ navbarState, handleNavbar }: NavbarProps): JSX.Element => (
   <NavWrapper>

@@ -53,6 +53,11 @@ const CollapseMenu = ({
             Contact
           </StyledLink>
         </li>
+        {/* <li>
+          <StyledLink to="/workspace" onClick={sendClickEvent}>
+            Tech Setup
+          </StyledLink>
+        </li> */}
       </NavLinks>
     </CollapseWrapper>
   );

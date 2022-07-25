@@ -1,9 +1,10 @@
-import React, { FunctionComponent } from "react";
+import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { device } from "../utils/breakpoints";
+import { device } from "../theme/breakpoints";
 import Heading from "../atoms/Heading";
 import Button from "../atoms/Button";
+import SpotifyWidget from "../molecules/SpotifyWidget";
 
 const Home: FunctionComponent = () => (
   <TitleContainer>
@@ -14,6 +15,7 @@ const Home: FunctionComponent = () => (
     <Link to="/contact">
       <Button data-qa-id="hello-btn">Say hello</Button>
     </Link>
+    <SpotifyWidget />
   </TitleContainer>
 );
 

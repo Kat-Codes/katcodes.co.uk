@@ -1,6 +1,12 @@
 import { ElementType } from "react";
 import styled from "styled-components";
-import { typography, TypographyProps, variant } from "styled-system";
+import {
+  space,
+  SpaceProps,
+  typography,
+  TypographyProps,
+  variant,
+} from "styled-system";
 
 const StyledHeading = styled("h1")(
   variant({
@@ -10,11 +16,13 @@ const StyledHeading = styled("h1")(
         fontSize: "24px",
       },
       2: {
+        textTransform: "uppercase",
         fontSize: "18px",
       },
     },
   }),
-  typography
+  typography,
+  space
 );
 
 const Heading = ({ level = "1", children, id, ...rest }: Props) => {
@@ -27,7 +35,7 @@ const Heading = ({ level = "1", children, id, ...rest }: Props) => {
   );
 };
 
-interface Props extends TypographyProps {
+interface Props extends TypographyProps, SpaceProps {
   as?: React.ElementType;
   level?: string;
   children: React.ReactNode;

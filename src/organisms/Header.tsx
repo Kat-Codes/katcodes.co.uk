@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Navbar from "../molecules/Navbar";
+import Navbar from "./Navbar";
 import ToggleSwitch from "../molecules/ToggleSwitch";
 import SocialLinks from "../molecules/SocialLinks";
 
