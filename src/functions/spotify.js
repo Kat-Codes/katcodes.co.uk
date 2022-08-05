@@ -1,5 +1,5 @@
-import querystring from "querystring";
-import { Buffer } from "buffer";
+const querystring = require("querystring");
+const { Buffer } = require("buffer");
 
 const {
   SPOTIFY_CLIENT_ID: client_id,
