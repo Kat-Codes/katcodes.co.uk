@@ -1,5 +1,6 @@
 const querystring = require("querystring");
 const { Buffer } = require("buffer");
+const axios = require("axios");
 
 const {
   SPOTIFY_CLIENT_ID: client_id,
@@ -14,7 +15,9 @@ const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 exports.handler = async (event, context, callback) => {
   const { access_token } = await getAccessToken();
 
-  return await fetch(NOW_PLAYING_ENDPOINT, {
+  return await axios({
+    url: NOW_PLAYING_ENDPOINT,
+    method: "GET",
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
@@ -22,7 +25,8 @@ exports.handler = async (event, context, callback) => {
 };
 
 const getAccessToken = async () => {
-  const response = await fetch(TOKEN_ENDPOINT, {
+  const response = await axios({
+    url: TOKEN_ENDPOINT,
     method: "POST",
     headers: {
       Authorization: `Basic ${basic}`,
