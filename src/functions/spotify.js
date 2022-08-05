@@ -15,15 +15,13 @@ const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 exports.handler = async (event, context, callback) => {
   const { access_token } = await getAccessToken();
 
-  console.log(SPOTIFY_CLIENT_ID);
-
   return await axios({
     url: NOW_PLAYING_ENDPOINT,
     method: "GET",
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
-  });
+  }).data;
 };
 
 const getAccessToken = async () => {
@@ -40,5 +38,5 @@ const getAccessToken = async () => {
     }),
   });
 
-  return response.json();
+  return response.data;
 };
